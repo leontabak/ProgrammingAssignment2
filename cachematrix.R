@@ -3,9 +3,27 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
-
-}
+makeCacheMatrix <- function( someMatrix = matrix()) {
+  matrixInverse <- NULL
+  
+  set <- function( someOtherMatrix ) {
+    someMatrix <<- someOtherMatrix
+    matrixInverse <<- NULL
+  } # set()
+  
+  get <- function() {
+    someMatrix
+  } # get()
+  
+  setInverse <- function( ourInverse ) {
+    matrixInverse <<- ourInverse
+  } # setInverse()
+  
+  getInverse <- function() {
+    matrixInverse
+  } # getInverse()
+  
+} # makeCacheMatrix()
 
 
 ## Write a short comment describing this function
